@@ -2,8 +2,7 @@
 
 # UIThemesToolbox
 
-  Utility library that simplifies light-dark UI theme management on Android. It allows you to make the theme of your application totally independent from the system theme by managing custom preferences and dynamic loading of the alternative **night** resources whenever you decide.
-  
+  Utility library that simplifies light-dark UI theme management on Android. It allows you to make the theme of your application totally independent from the system theme by managing custom preferences and dynamic loading of the alternative **night** resources whenever you decide. It also conveniently organizes the dynamic theme switching via corresponding interface and a tool that can configure your views in bulks.
   ![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/device-2021-09-13-001700.png)![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/device-2021-09-13-133728.png)
 ![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/PicsArt_09-13-01.32.32.png)![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/PicsArt_09-13-01.33.26.png)
 ## Include in your project  
@@ -37,4 +36,20 @@ allprojects {
 ```kotlin 
 // Static methods of UIThemesToolbox object provide you various utilities for theme management
 
+// detect if the current theme is dark with this method. it returns the setting of your application or system theme if there is none set
+val isDarkTheme: Boolean = UIThemesToolbox.isDarkThemeEnabled(context)
+
+// it is also possible to detect whether the dark theme setting is set manually or automatic (system)
+val isDarkThemeSetByMyUser = !UIThemesToolbox.isDarkThemeSettingAutomatic(context)
+
+// set the theme like this
+UIThemesToolbox.setDarkTheme(context, enabled = true /* pass false to set light theme */, uiThemesHandler = null)
+
+// you can remove the manual settings of theme and delegate the theme management in your app back to system
+UIThemesToolbox.removeManualSetting(context, uiThemesHandler = null)
+
+// the null arguments in the two methods above are of UIThemesHandler, which is interface. You can implement it and its method initUITheme() where you should do configurations of all your views for the new theme (refreshing). Then you can pass your uiThemesHandler to two methods above and whenever the theme settings changes, your whole UI will update instantly.
+
+
 ```
+
