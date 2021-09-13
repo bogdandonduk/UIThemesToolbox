@@ -12,7 +12,7 @@ dependencies {
 	...  
   
 	def latest_version_tag = 2.0
-	implementation "com.github.bogdandonduk:ViewDataBindingWrappers:$latest_version_tag"  
+	implementation "com.github.bogdandonduk:UIThemesToolbox:$latest_version_tag"  
   
 	...  
 }  
