@@ -3,6 +3,7 @@
 # UIThemesToolbox
 
   Utility library that simplifies light-dark UI theme management on Android. It allows you to make the theme of your application totally independent from the system theme by managing custom preferences and dynamic loading of the alternative **night** resources whenever you decide.
+  
   ![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/device-2021-09-13-001700.png)![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/device-2021-09-13-133728.png)
 ![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/PicsArt_09-13-01.32.32.png)![](https://github.com/bogdandonduk/UIThemesToolbox/blob/master/PicsArt_09-13-01.33.26.png)
 ## Include in your project  
