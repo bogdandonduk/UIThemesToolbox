@@ -75,7 +75,7 @@ view.setBackgroundColor(UIThemesToolbox.resolveColorResourceAuto(context, R.colo
 
 // add views to your defined bulks 
 bulkConfigurator.addItemsToConfiguredBulkWithAutoReplacementIfPresent(
-	text_views",
+	"text_views",
 	findViewById<TextView(R.id.title_text_view),
 	findViewById<TextView>(R.id.message_text_view)
 )
