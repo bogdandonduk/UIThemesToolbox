@@ -34,7 +34,7 @@ allprojects {
 ```kotlin 
 // Static methods of UIThemesToolbox object provide you various utilities for theme management
 
-// detect if the current theme is dark with this method. it returns the setting of your application or system theme if there is none set
+// detect if the current theme is dark with this method. It returns the setting of your application or system theme if there is none set
 val isDarkTheme: Boolean = UIThemesToolbox.isDarkThemeEnabled(context)
 
 // it is also possible to detect whether the dark theme setting is set manually or automatic (system)
@@ -46,9 +46,9 @@ UIThemesToolbox.setDarkTheme(context, enabled = true /* pass false to set light 
 // you can remove the manual settings of theme and delegate the theme management in your app back to system
 UIThemesToolbox.removeManualSetting(context, uiThemesHandler = null)
 
-// the null arguments in the two methods above are of UIThemesHandler, which is interface. 
+// the null arguments in the two methods above are of type UIThemesHandler, which is interface. 
 // You can implement it and its method initUITheme() where you should do configurations of all your views for the new theme (refreshing). 
-// Then you can pass your uiThemesHandler to two methods above and whenever the theme settings changes, your whole UI will update instantly.
+// Then you can pass your uiThemesHandler to two methods above and whenever the theme setting changes, your whole UI will update instantly.
 
 // you can dynamically and automatically load resources (default or alternative) for the theme setting of your app like this:
 val backgroundColor = UIThemesToolbox.resolveColorResourceAuto(context, R.color.background_color)
